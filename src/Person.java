@@ -14,22 +14,26 @@ public class Person {
      * @return - returns true if this person has another gender than passed person and they are not husband and wife, false otherwise
      */
     public boolean marry(Person person) {
-        if (person.man != man){
-            if (spouse == null) {
-                spouse = person;
-                return true;
-            }
-            else {
-                if (spouse.equals(person)){
-                    return true;
-                }
-                else {
-                    person.divorce();
-                    this.divorce();
-                    spouse = person;
-                    return true;
-                }
-            }
+        if (person.man != this.man){
+                    if (spouse == null) {
+                        spouse = person;
+                        person.marry(this);
+                        return true;
+                    }
+                    else
+                        if (spouse.equals(person)){
+                            person.marry(this);
+                            return true;
+                        }
+                        else {
+                           if (person.divorce() & this.divorce()) {
+                               spouse = person;
+                               person.marry(this);
+                               return true;
+                           }
+                           else return false;
+                        }
+
         }
         else return false;
     }
@@ -47,6 +51,4 @@ public class Person {
         }
         else return false;
     }
-
-
 }
