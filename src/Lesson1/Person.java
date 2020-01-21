@@ -1,3 +1,5 @@
+package Lesson1;
+
 public class Person {
     private final boolean man;
     private final String name;

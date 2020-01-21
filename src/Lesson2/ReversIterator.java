@@ -1,3 +1,5 @@
+package Lesson2;
+
 import java.util.*;
 class ReversIterator implements Iterator {
     private List collection;

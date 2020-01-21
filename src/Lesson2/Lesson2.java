@@ -1,3 +1,5 @@
+package Lesson2;
+
 import java.util.*;
 import java.nio.file.*;
 import java.io.IOException;
