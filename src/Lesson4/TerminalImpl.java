@@ -16,12 +16,10 @@ public class TerminalImpl implements Terminal {
     }
 
     public TerminalServer server(){
-
         return server;
     }
 
     public void addClient(Person person, double money, int pinCode){
-
         server.addClient(money, person, pinCode);
     }
 
@@ -39,7 +37,6 @@ public class TerminalImpl implements Terminal {
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
-            return;
         }
     }
 
@@ -77,6 +74,4 @@ public class TerminalImpl implements Terminal {
             System.out.println(e.getMessage());
         }
     }
-
-
 }

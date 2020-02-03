@@ -31,10 +31,8 @@ public class Deposit {
     }
 
     public void setMoney(double money) {
-        this.money += money;
+        this.money = money;
     }
-
-
 
     public void setPerson(Person person) {
         this.person = person;
