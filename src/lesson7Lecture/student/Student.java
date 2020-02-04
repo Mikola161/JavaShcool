@@ -1,6 +1,6 @@
-package lesson7.student;
+package lesson7Lecture.student;
 
-import lesson7.human.Human;
+import lesson7Lecture.human.Human;
 
 import java.io.Serializable;
 

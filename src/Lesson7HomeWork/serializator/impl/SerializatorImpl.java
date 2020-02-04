@@ -1,8 +1,7 @@
-package lesson7.serializator.impl;
+package Lesson7HomeWork.serializator.impl;
 
-import lesson7.serializator.Serializator;
-import lesson7.student.Student;
-
+import Lesson7HomeWork.serializator.Serializator;
+import lesson7Lecture.student.Student;
 
 import java.io.*;
 

@@ -5,9 +5,9 @@ import java.lang.reflect.Method;
 import java.util.*;
 import java.lang.reflect.InvocationTargetException;
 
-public class Handler<K, V> implements InvocationHandler {
+public class Handler<K, B> implements InvocationHandler {
     private Object object;
-    private Map<K, V> map = new HashMap<>();
+    private Map<K, B> map = new HashMap<>();
 
     public  Handler (MyClass object){
         this.object = object;
@@ -21,13 +21,11 @@ public class Handler<K, V> implements InvocationHandler {
                 if (method.isAnnotationPresent(Cash.class)) {
                     if (map.containsKey(arg)) {
                         System.out.println("The value from cash");
-                        System.out.println("For key: " + arg + ", the value is: " + map.get(arg));
-                        return map.get(arg);
                     } else {
-                        map.put((K) arg, (V) method.invoke(object, arg));
-                        System.out.println("For key: " + arg + ", the value is: " + map.get(arg));
-                        return map.get(arg);
+                        map.put((K)arg, (B) method.invoke(object, arg));
                     }
+                    System.out.println("For key: " + arg + ", the value is: " + map.get(arg));
+                    return map.get(arg);
                 }
                 else return method.invoke(object, args);
             }

@@ -1,8 +1,8 @@
-package lesson7;
+package lesson7Lecture;
 
-import lesson7.serializator.Serializator;
-import lesson7.serializator.impl.SerializatorImpl;
-import lesson7.student.Student;
+import lesson7Lecture.serializator.Serializator;
+import lesson7Lecture.serializator.impl.SerializatorImpl;
+import lesson7Lecture.student.Student;
 
 import java.io.IOException;
 

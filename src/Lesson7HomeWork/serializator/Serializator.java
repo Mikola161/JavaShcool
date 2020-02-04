@@ -1,12 +1,12 @@
-package lesson7.serializator;
-import lesson7.student.Student;
+package Lesson7HomeWork.serializator;
+import lesson7Lecture.student.Student;
 
 import java.io.IOException;
 
 public interface Serializator{
 
     /**
-     * Сериализует класс {@link lesson7.student.Student}
+     * Сериализует класс {@link Student}
      * @param o объект
      * @param fileName имя файла
      */

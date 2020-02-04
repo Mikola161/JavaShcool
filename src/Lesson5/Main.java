@@ -9,9 +9,10 @@ public class Main {
     public static void main(String[] args) throws Exception{
         MyClass myClass = new MyClass();
         Class clas = myClass.getClass();
+        Handler handler = new Handler<>(myClass);
         MyInterface proxy = (MyInterface) Proxy.newProxyInstance(myClass.getClass().getClassLoader(),
                                                                     myClass.getClass().getInterfaces(),
-                                                                    new Handler<Integer, Integer>(myClass));
+                                                                    handler);
 
         try {
             while (clas != null){

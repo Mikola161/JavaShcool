@@ -1,4 +1,4 @@
-package lesson7.human;
+package lesson7Lecture.human;
 
 import java.io.Serializable;
 
