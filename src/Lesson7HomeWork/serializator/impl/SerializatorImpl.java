@@ -1,7 +1,7 @@
 package Lesson7HomeWork.serializator.impl;
 
+import Lesson7HomeWork.Handler;
 import Lesson7HomeWork.serializator.Serializator;
-import lesson7Lecture.student.Student;
 
 import java.io.*;
 
@@ -20,13 +20,13 @@ public class SerializatorImpl implements Serializator {
     }
 
     @Override
-    public Student deserialize(String fileName) throws IOException, ClassNotFoundException {
+    public Handler deserialize(String fileName) throws IOException, ClassNotFoundException {
         try(
                 FileInputStream fileInputStream = new FileInputStream(fileName);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
                 )
         {
-            return (Student) objectInputStream.readObject();
+            return (Handler) objectInputStream.readObject();
         }
     }
 }
